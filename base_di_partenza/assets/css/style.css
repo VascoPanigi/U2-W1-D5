@@ -369,8 +369,12 @@ a {
 
 /* NON FACCIO IN TEMPO - PRIMA FACCIO NAVBAR */
 
+header {
+  position: relative;
+}
+
 .animation-container {
-  width: 30%;
+  width: 550px;
   position: absolute;
   right: 0;
   top: 74px;
