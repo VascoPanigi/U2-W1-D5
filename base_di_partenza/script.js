@@ -16,3 +16,29 @@ window.addEventListener("scroll", () => {
     );
   }
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const getMElements = document.querySelectorAll(".animation-container g");
+
+  const opacityZeroElements = [];
+  console.log(opacityZeroElements);
+
+  getMElements.forEach((gElement) => {
+    if (gElement.getAttribute("opacity") === "0") {
+      opacityZeroElements.push(gElement);
+    }
+  });
+
+  const randomNumber = Math.floor(Math.random() * opacityZeroElements.length);
+  const randomElement = opacityZeroElements[randomNumber];
+
+  const showM = () => {
+    if (randomElement.getAttribute("opacity") === "0") {
+      randomElement.setAttribute("opacity", "1");
+    } else {
+      randomElement.setAttribute("opacity", "0");
+    }
+  };
+
+  setInterval(showM, 200);
+});
