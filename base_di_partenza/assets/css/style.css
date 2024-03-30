@@ -314,7 +314,7 @@ a {
 .aside-container {
   display: flex;
   flex-direction: column;
-  row-gap: 5em;
+  row-gap: 3.5em;
   flex-wrap: wrap;
   position: sticky;
   top: 85px;
@@ -378,4 +378,90 @@ header {
   position: absolute;
   right: 0;
   top: 74px;
+}
+
+.short-date {
+  display: none;
+}
+
+/* MEDIA FOR MEDIUM SCREEN */
+@media screen and (max-width: 992px) {
+  nav,
+  .trending-section,
+  .hero-container,
+  .core-section-container {
+    width: 90%;
+    margin-inline: auto;
+  }
+  .animation-container {
+    position: absolute;
+    right: -250px;
+    top: 74px;
+  }
+
+  .trending-cards-container {
+    max-width: 50%;
+  }
+
+  .long-date {
+    display: none;
+  }
+
+  .short-date {
+    display: flex;
+    justify-content: space-between;
+    padding-inline-end: 3em;
+  }
+  .core-section-container > section {
+    margin-inline-end: 0;
+  }
+  .core-section-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .sticky-container {
+    order: -1;
+  }
+  .sticky-container {
+    max-width: 890px;
+  }
+
+  .aside-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 1em;
+    flex-wrap: wrap;
+  }
+
+  .anchor-tag-container {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 20px;
+    row-gap: 20px;
+  }
+
+  .anchor-tag-container > a {
+    background-color: white;
+    border: 1px solid rgb(219, 219, 219);
+    border-radius: 5px;
+    opacity: 70%;
+    column-gap: 10px;
+    padding-inline: 2em;
+    padding-block: 0;
+  }
+  .see-more-categories {
+    display: none;
+  }
+
+  .gray-horizontal-rule {
+    width: 100%;
+  }
+
+  .footer-container {
+    display: flex;
+    column-gap: 50px;
+    margin-block-end: 2em;
+  }
 }
